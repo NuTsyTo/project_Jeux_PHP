@@ -1,0 +1,18 @@
+{
+    "name": "maxence/cours-php",
+    "type": "project",
+    "authors": [
+        {
+            "name": "NuTsyTo",
+            "email": "maxence.degaugue@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "require": {
+        "symfony/var-dumper": "^5.4"
+    }
+}
