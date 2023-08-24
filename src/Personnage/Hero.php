@@ -1,6 +1,6 @@
-<?php
+<?php declare(strict_types = 1);
 
-use Personnage;
+namespace App\Personnage;
 
 class Hero extends Personnage
 {
