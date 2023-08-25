@@ -2,11 +2,14 @@
 
 namespace App\Personnage;
 
+use App\Mixin\Criable;
+
 class Personnage
 {
+    use Criable;
+
     protected $vie = 100;
     protected $puissance = 0;
-    protected $cri = "";
 
     public function getVie()
     {
@@ -36,28 +39,6 @@ class Personnage
 
         // design pattern "fluent"
         return $this;
-    }
-
-    public function setCri($cri)
-    {
-        if(strrpos($cri, '!!!') !== strlen($cri) - 3){
-            throw new Exception('Les cris doivent se terminer avec trois points d\'exclamation');
-        }
-
-        $this->cri = $cri;
-
-        // design pattern "fluent"
-        return $this;
-
-    }
-
-    public function crier()
-    {
-        echo $this->cri. "\n";
-
-        // design pattern "fluent"
-        return $this;
-
     }
 
 }

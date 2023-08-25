@@ -2,6 +2,7 @@
 
 // La classe combat contient les classes Monstre et Hero
 use App\Combat\Combat;
+use App\Decor\Arbre;
 // La classe Hero dépend de la classe Personnage
 use App\Personnage\Hero;
 // La classe monstre dépends de la classe Personnage
@@ -10,7 +11,12 @@ use App\Personnage\Personnage;
 // La classe Vampire dépend de la classe Personnage
 use App\Personnage\Vampire;
 
-require __DIR__.'/vendor/autoload.php';
+require __DIR__.'/../vendor/autoload.php';
+
+$a = new Arbre();
+$a  
+    ->setCri('JE S\'APPELLE GROOT !!!')
+    ->crier();
 
 $m = new Monstre();
 $m -> crier();
